@@ -3,7 +3,7 @@ import datetime
 
 # connect to database
 try: 
-    conn = psycopg2.connect("dbname='students' user='postgres' host='localhost' password='minecraft568'")
+    conn = psycopg2.connect("dbname='students' user='postgres' host='localhost' password='pass'")
 except:
     print("failed to connect to database")
 
