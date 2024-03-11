@@ -81,10 +81,6 @@ def deleteStudent(student_id: int):
     cur.close()
 
 def main():
-    #addStudent("Jane", "Doe", "janedoe@cmail.carleton.ca", datetime.date(2023, 6, 10))
-
-    #deleteStudent(10)
-
     getAllStudents()
 
     # make changes persist
