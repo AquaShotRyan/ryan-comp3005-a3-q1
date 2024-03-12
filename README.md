@@ -16,3 +16,6 @@ CREATE TABLE students(
 6. Add login info to ``` operations.py ```
 7. Navigate to the project folder
 8. Run ``` py main.py ``` in the terminal
+
+### Demo Video
+https://youtu.be/wAQd2-2vOxw
