@@ -11,6 +11,28 @@ def connect():
     except:
         print("failed to connect to database")
 
+def initialize():
+    conn = connect()
+
+    cur = conn.cursor()
+    # clear students table
+    cur.execute(
+    """
+    DELETE FROM students;        
+    """)
+    cur.execute(
+    """
+    INSERT INTO students (first_name, last_name, email, enrollment_date) VALUES
+    ('John', 'Doe', 'john.doe@example.com', '2023-09-01'),
+    ('Jane', 'Smith', 'jane.smith@example.com', '2023-09-01'),
+    ('Jim', 'Beam', 'jim.beam@example.com', '2023-09-02');
+    """
+    )
+
+    cur.close()
+    conn.commit()
+    conn.close()
+
 # retrieves and displays all records from the students table
 def getAllStudents():
     conn = connect()

@@ -15,6 +15,7 @@ def main():
         print(
         """
 Select an option by typing in its number
+(0) - Reset table with default values
 (1) - Print all students
 (2) - Add a student
 (3) - Update a student's email
@@ -24,6 +25,9 @@ Select an option by typing in its number
         )
         ans = int(input("SELECTION: "))# ask for option to perform
         match ans:
+            case 0:
+                operations.initialize()
+                print("Students table reset")
             case 1:# print all students
                 operations.getAllStudents()
             case 2:# add a student
