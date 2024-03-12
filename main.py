@@ -1,6 +1,5 @@
 import operations # import functions needed for app
 import datetime
-import os
 
 # convert date in 'YYYY/MM/DD' string format into datetime.date object
 def parseDate(date: str):
