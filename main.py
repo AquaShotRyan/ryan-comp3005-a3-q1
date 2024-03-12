@@ -12,7 +12,7 @@ def parseDate(date: str):
     return datetime.date(year, month, day)
 
 def main():
-    while True:
+    while True:# while loop for repeatedly showing a menu
         print(
         """
 Select an option by typing in its number
@@ -23,27 +23,27 @@ Select an option by typing in its number
 (5) - Exit the application
         """
         )
-        ans = int(input("SELECTION: "))
+        ans = int(input("SELECTION: "))# ask for option to perform
         match ans:
-            case 1:
+            case 1:# print all students
                 operations.getAllStudents()
-            case 2:
+            case 2:# add a student
                 fName = input("first_name: ")
                 lName = input("last_name: ")
                 email = input("email: ")
                 date = input("enrollment_date (i.e 2023/2/2 for Feb 2, 2023): ")
                 operations.addStudent(fName, lName, email, parseDate(date))
                 print(f"Added {fName}.")
-            case 3:
+            case 3:# update an email
                 update_id = int(input("student_id: "))
                 new_email = input("email: ")
                 operations.updateStudentEmail(update_id, new_email)
                 print(f"Updated email for student {update_id}")
-            case 4:
+            case 4:# delete a student
                 delete_id = int(input("student_id: "))
                 operations.deleteStudent(delete_id)
                 print(f"Deleted student {delete_id}")
-            case 5:
+            case 5:# exit application
                 print("Exiting the application.")
                 break
                 
