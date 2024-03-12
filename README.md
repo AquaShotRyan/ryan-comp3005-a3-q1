@@ -1,4 +1,4 @@
-# ryan-comp3005-a3-q1
+# README
 ### How to run
 1. Install python (this program uses 3.11.8)
 2. Install psycopg2 with ``` pip install psycopg2 ```
